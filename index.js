@@ -1,7 +1,8 @@
 const express=require("express")
 const app=express()
-const port =2000
-
+const port =2000||process.env.PORT
+const dotenv=require("dotenv")
+dotenv.config()
 app.get("/",(req,res)=>{
     res.send("from check aws")
 })
